@@ -49,7 +49,20 @@ We'll want a simplified and UX improved onramp system to demonstrate that this w
 All of this can be done straightforwardly starting with a fork of [Onramp code](https://github.com/ZenGround0/onramp-contracts/tree/main) 
 
 
-   
+# Prototype Deployment strategy
+
+To deploy a prototype we'll want 
+
+Contracts
+* demo and onramp contracts on arbitrum sepolia or some other cheap Eth L2
+* CrossChainPDPService contract deployed on filecoin
+Nodes
+* a PDP Storage provider
+* arbitrum sepolia fullnode for blockchain buffer
+* xchain bridge to make PDP deals
+
+Preparing Txs will call PDP retrieval from the PDP SP and the filecoin block device for tx replay but in an ephemeral client process
+For the full mounted contract milestone contract preparation will happen once before contract deploy 
 
 
 
